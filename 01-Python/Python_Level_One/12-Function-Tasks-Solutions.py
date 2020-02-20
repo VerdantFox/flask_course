@@ -13,25 +13,19 @@
 #  Create a function that takes in two integers and returns
 ## a Boolean True if their sum is 10, False if their sum is something else.
 
-def check_ten(n1,n2):
+
+def check_ten(n1, n2):
 
     return (n1 + n2) == 10
 
 
+check_ten(10, 0)
 
 
-check_ten(10,0)
+check_ten(5, 5)
 
 
-
-
-check_ten(5,5)
-
-
-
-
-check_ten(2,7)
-
+check_ten(2, 7)
 
 
 # ## Task 2
@@ -39,20 +33,18 @@ check_ten(2,7)
 # Create a function that takes in two integers and returns True if their
 # sum is 10, otherwise, return the actual sum value.
 
-def check_ten_sum(n1,n2):
-    if (n1+n2) == 10:
+
+def check_ten_sum(n1, n2):
+    if (n1 + n2) == 10:
         return True
     else:
-        return n1+n2
+        return n1 + n2
 
 
+check_ten_sum(10, 0)
 
 
-check_ten_sum(10,0)
-
-
-
-check_ten_sum(2,7)
+check_ten_sum(2, 7)
 
 # ## Task 3
 #
@@ -60,18 +52,15 @@ check_ten_sum(2,7)
 # first character of that string in upper case.
 
 
-
 def first_upper(mystring):
     # Code Here
     return mystring[0].upper()
 
 
-first_upper('hello')
+first_upper("hello")
 
 
-
-
-first_upper('agent')
+first_upper("agent")
 
 
 # ## Task 4
@@ -82,7 +71,6 @@ first_upper('agent')
 # (https://stackoverflow.com/questions/7983820/get-the-last-4-characters-of-a-string)
 
 
-
 def last_two(mystring):
     if len(mystring) < 2:
         return "Error"
@@ -90,14 +78,13 @@ def last_two(mystring):
         return mystring[-2:]
 
 
-
-last_two('hello')
-
-
-last_two('hi')
+last_two("hello")
 
 
-last_two('a')
+last_two("hi")
+
+
+last_two("a")
 
 
 # ## Task 5
@@ -106,29 +93,23 @@ last_two('a')
 # in the list. Hint: Use slicing and a for loop.
 
 
-
-
-
 def seq_check(nums):
 
     # Note: iterate with length-2, so can use i+1 and i+2 in the loop
-    for i in range(len(nums)-2):
+    for i in range(len(nums) - 2):
         # Check in sets of 3 if we have 1,2,3 in a row
-        if nums[i]==1 and nums[i+1]==2 and nums[i+2]==3:
+        if nums[i] == 1 and nums[i + 1] == 2 and nums[i + 2] == 3:
             return True
     return False
 
 
-
-seq_check([1,2,3])
-
+seq_check([1, 2, 3])
 
 
-seq_check([7,7,7,1,2,3,7,7,7])
+seq_check([7, 7, 7, 1, 2, 3, 7, 7, 7])
 
 
-
-seq_check([3,2,1,3,2,1,1,1,2,2,3,3,3])
+seq_check([3, 2, 1, 3, 2, 1, 1, 1, 2, 2, 3, 3, 3])
 
 
 # ## Task 6
@@ -138,20 +119,17 @@ seq_check([3,2,1,3,2,1,1,1,2,2,3,3,3])
 # (or just 0). Hint: Absolute Value.**
 
 
-
-def compare_len(s1,s2):
-    return abs(len(s1)-len(s2))
-
+def compare_len(s1, s2):
+    return abs(len(s1) - len(s2))
 
 
-compare_len('aa','aa')
+compare_len("aa", "aa")
 
 
-compare_len('a','bb')
+compare_len("a", "bb")
 
 
-compare_len('bb','a')
-
+compare_len("bb", "a")
 
 
 # ## Task 7
@@ -159,7 +137,6 @@ compare_len('bb','a')
 # Given a list of integers, if the length of the list is an even number,
 # return the sum of the list. If the length of the list is odd, return the max
 ## value in that list.
-
 
 
 def sum_or_max(mylist):
@@ -171,9 +148,7 @@ def sum_or_max(mylist):
         return max(mylist)
 
 
-
-sum_or_max([1,2,3])
-
+sum_or_max([1, 2, 3])
 
 
-sum_or_max([0,1,2,3])
+sum_or_max([0, 1, 2, 3])

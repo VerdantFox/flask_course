@@ -15,19 +15,21 @@ app = Flask(__name__)
 # when you deploy this to a real website.
 # export SECRET_KEY=mysecret
 # set SECRET_KEY=mysecret
-app.config['SECRET_KEY'] = 'mysecret'
+app.config["SECRET_KEY"] = "mysecret"
 
 #################################
 ### DATABASE SETUPS ############
 ###############################
 
 basedir = os.path.abspath(os.path.dirname(__file__))
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + os.path.join(
+    basedir, "data.sqlite"
+)
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 
 db = SQLAlchemy(app)
-Migrate(app,db)
+Migrate(app, db)
 
 
 ###########################

@@ -17,13 +17,13 @@
 # Let's go ahead and see how we can construct lists!
 
 # Assign a list to an variable named my_list
-my_list = [1,2,3]
+my_list = [1, 2, 3]
 
 
 # We just created a list of integers, but lists can actually
 # hold different object types. For example:
 
-my_list = ['A string',23,100.232,'o']
+my_list = ["A string", 23, 100.232, "o"]
 
 
 # Just like strings, the len() function will tell you how
@@ -37,7 +37,7 @@ len(my_list)
 
 # Indexing and slicing works just like in strings. Let's make a new list to
 # remind ourselves of how this works:
-my_list = ['one','two','three',4,5]
+my_list = ["one", "two", "three", 4, 5]
 
 # Grab element at index 0
 my_list[0]
@@ -50,7 +50,7 @@ my_list[:3]
 
 # We can also use + to concatenate lists, just like we did for strings.
 
-my_list + ['new item']
+my_list + ["new item"]
 
 # Note: This doesn't actually change the original list!
 
@@ -60,7 +60,7 @@ my_list
 
 
 # Reassign
-my_list = my_list + ['add new item permanently']
+my_list = my_list + ["add new item permanently"]
 
 my_list
 
@@ -86,13 +86,13 @@ my_list
 # Let's go ahead and explore some more special methods for lists:
 
 # Create a new list
-mylist = [1,2,3]
+mylist = [1, 2, 3]
 
 
 # Use the .append() method to permanently add an item to the end of a list:
 
 # Append
-mylist.append('append me!')
+mylist.append("append me!")
 
 # Show
 print(mylist)
@@ -121,8 +121,6 @@ print(mylist)
 mylist[100]
 
 
-
-
 #######################
 #### Nesting Lists ####
 #######################
@@ -133,12 +131,12 @@ mylist[100]
 # Let's see how this works!
 
 # Let's make three lists
-lst_1=[1,2,3]
-lst_2=[4,5,6]
-lst_3=[7,8,9]
+lst_1 = [1, 2, 3]
+lst_2 = [4, 5, 6]
+lst_3 = [7, 8, 9]
 
 # Make a list of lists to form a matrix
-matrix = [lst_1,lst_2,lst_3]
+matrix = [lst_1, lst_2, lst_3]
 
 # Show
 matrix

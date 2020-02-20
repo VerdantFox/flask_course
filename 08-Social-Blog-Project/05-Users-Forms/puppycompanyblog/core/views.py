@@ -1,14 +1,16 @@
 # core/views.py
 
-from flask import render_template,request,Blueprint
+from flask import render_template, request, Blueprint
 
-core = Blueprint('core',__name__)
+core = Blueprint("core", __name__)
 
-@core.route('/')
+
+@core.route("/")
 def index():
     # MORE TO COME!
-    return render_template('index.html')
+    return render_template("index.html")
 
-@core.route('/info')
+
+@core.route("/info")
 def info():
-    return render_template('info.html')
+    return render_template("info.html")

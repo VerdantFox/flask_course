@@ -1,16 +1,17 @@
 from flask import Flask, render_template
+
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route("/")
 def index():
-    return render_template('04-Home.html')
+    return render_template("04-Home.html")
 
-@app.route('/puppy/<name>')
+
+@app.route("/puppy/<name>")
 def pup_name(name):
-    return render_template('04-Puppy.html',name=name)
+    return render_template("04-Puppy.html", name=name)
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)

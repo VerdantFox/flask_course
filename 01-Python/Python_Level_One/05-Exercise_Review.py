@@ -10,7 +10,7 @@
 ###############
 
 # Given the string:
-s = 'flask'
+s = "flask"
 
 # Use indexing to print out the following:
 # 'f'
@@ -31,7 +31,7 @@ s = 'flask'
 ###############
 
 # Given this nested list:
-mylist = [3,7,[1,4,'hello']]
+mylist = [3, 7, [1, 4, "hello"]]
 # Reassign "hello" to be "goodbye"
 
 
@@ -41,11 +41,11 @@ mylist = [3,7,[1,4,'hello']]
 
 # Using keys and indexing, grab the 'hello' from the following dictionaries:
 
-d1 = {'simple_key':'hello'}
+d1 = {"simple_key": "hello"}
 
-d2 = {'k1':{'k2':'hello'}}
+d2 = {"k1": {"k2": "hello"}}
 
-d3 = {'k1':[{'nest_key':['this is deep',['hello']]}]}
+d3 = {"k1": [{"nest_key": ["this is deep", ["hello"]]}]}
 
 
 ###############
@@ -53,7 +53,7 @@ d3 = {'k1':[{'nest_key':['this is deep',['hello']]}]}
 ###############
 
 # Use a set to find the unique values of the list below:
-mylist = [1,1,1,1,1,2,2,2,2,3,3,3,3]
+mylist = [1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3]
 
 
 ###############

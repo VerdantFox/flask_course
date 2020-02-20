@@ -12,9 +12,11 @@
 
 x = 25
 
+
 def printer():
     x = 50
     return x
+
 
 print(x)
 print(printer())
@@ -71,7 +73,7 @@ print(x)
 # Local
 
 # x is local here:
-f = lambda x:x**2
+f = lambda x: x ** 2
 
 
 # Enclosing function locals
@@ -79,16 +81,18 @@ f = lambda x:x**2
 # This occurs when we have a function inside a function (nested functions)
 #
 
-name = 'This is a global name'
+name = "This is a global name"
+
 
 def greet():
     # Enclosing function
-    name = 'Sammy'
+    name = "Sammy"
 
     def hello():
-        print('Hello '+name)
+        print("Hello " + name)
 
     hello()
+
 
 greet()
 
@@ -99,9 +103,6 @@ greet()
 # Global
 #
 print(name)
-
-
-
 
 
 # Local Variables
@@ -116,13 +117,15 @@ print(name)
 
 x = 50
 
+
 def func(x):
-    print('x is', x)
+    print("x is", x)
     x = 2
-    print('Changed local x to', x)
+    print("Changed local x to", x)
+
 
 func(x)
-print('x is still', x)
+print("x is still", x)
 
 
 # The first time that we print the value of the name x with the first line in
@@ -158,16 +161,18 @@ print('x is still', x)
 
 x = 50
 
+
 def func():
     global x
-    print('This function is now using the global x!')
-    print(f'Because of global x is: {x}')
+    print("This function is now using the global x!")
+    print(f"Because of global x is: {x}")
     x = 2
-    print(f'Ran func(), changed global x to {x}')
+    print(f"Ran func(), changed global x to {x}")
 
-print(f'Before calling func(), x is: {x}')
+
+print(f"Before calling func(), x is: {x}")
 func()
-print(f'Value of x (outside of func()) is: {x}')
+print(f"Value of x (outside of func()) is: {x}")
 
 
 # The global statement is used to declare that x is a global variable - hence,

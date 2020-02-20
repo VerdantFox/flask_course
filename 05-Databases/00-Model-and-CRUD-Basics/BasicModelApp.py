@@ -1,6 +1,7 @@
 import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+
 ######################################
 #### SET UP OUR SQLite DATABASE #####
 ####################################
@@ -10,8 +11,10 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 app = Flask(__name__)
 # Connects our Flask App to our Database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + os.path.join(
+    basedir, "data.sqlite"
+)
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
 
@@ -24,7 +27,7 @@ db = SQLAlchemy(app)
 class Puppy(db.Model):
 
     # If you don't provide this, the default table name will be the class name
-    __tablename__ = 'puppies'
+    __tablename__ = "puppies"
 
     # Now create the columns
     # Lots of possible types. We'll introduce through out the course
@@ -35,7 +38,7 @@ class Puppy(db.Model):
     #######################################
 
     # Primary Key column, unique id for each puppy
-    id = db.Column(db.Integer,primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
     # Puppy name
     name = db.Column(db.Text)
     # Puppy age in years
@@ -43,7 +46,7 @@ class Puppy(db.Model):
 
     # This sets what an instance in this table will have
     # Note the id will be auto-created for us later, so we don't add it here!
-    def __init__(self,name,age):
+    def __init__(self, name, age):
         self.name = name
         self.age = age
 

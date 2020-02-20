@@ -1,13 +1,14 @@
 # Set up your imports and your flask app.
 
-@app.route('/')
+
+@app.route("/")
 def index():
     # This home page should have the form.
     pass
 
 
 # This page will be the page after the form
-@app.route('/report')
+@app.route("/report")
 def report():
     # Check the user name for the 3 requirements.
 
@@ -18,6 +19,7 @@ def report():
     # Return the information to the report page html.
     pass
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     # Fill this in!
     pass

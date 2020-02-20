@@ -26,17 +26,17 @@
 # single quotes or double quotes. For example:
 
 # Single word
-'hello'
+"hello"
 
 # Entire phrase
-'This is also a string'
+"This is also a string"
 
 # We can also use double quote
 "String built with double quotes"
 
 
 # Be careful with quotes!
-' I'm using single quotes, but will create an error'
+#' I'm using single quotes, but will create an error'
 
 
 # The reason for the error above is because the single quote in I'm stopped the
@@ -53,27 +53,27 @@
 # strings, but the correct way to display strings in your output is by using a print function.
 
 # We can simply declare a string
-'Hello World'
+"Hello World"
 
 # note that we can't output multiple strings this way
-'Hello World 1'
-'Hello World 2'
+"Hello World 1"
+"Hello World 2"
 
 
 # We can use a print statement to print a string.
 
-print('Hello World 1')
-print('Hello World 2')
-print('Use \n to print a new line')
-print('\n')
-print('See what I mean?')
+print("Hello World 1")
+print("Hello World 2")
+print("Use \n to print a new line")
+print("\n")
+print("See what I mean?")
 
 
 # String Basics
 
 # We can also use a function called len() to check the length of a string!
 
-len('Hello World')
+len("Hello World")
 
 
 # ## String Indexing
@@ -85,9 +85,9 @@ len('Hello World')
 # called s and the walk through a few examples of indexing.
 
 # Assign s as a string
-s = 'Hello World'
+s = "Hello World"
 
-#Check
+# Check
 s
 
 # Print the object
@@ -124,7 +124,7 @@ s[:3]
 # 0 up to 3. It doesn't include the 3rd index. You'll notice this a lot in
 # Python, where statements and are usually in the context of "up to, but not including".
 
-#Everything
+# Everything
 s[:]
 
 
@@ -158,7 +158,7 @@ s[::-1]
 s
 
 # Let's try to change the first letter to 'x'
-s[0] = 'x'
+s[0] = "x"
 
 
 # Notice how the error tells us directly what we can't do,
@@ -168,18 +168,18 @@ s[0] = 'x'
 s
 
 # Concatenate strings!
-s + ' concatenate me!'
+s + " concatenate me!"
 
 # We can reassign s completely though!
-s = s + ' concatenate me!'
+s = s + " concatenate me!"
 
 print(s)
 
 # We can use the multiplication symbol to create repetition!
 
-letter = 'z'
+letter = "z"
 
-letter*10
+letter * 10
 
 
 # ## Basic Built-in String methods
@@ -208,7 +208,7 @@ s.lower()
 s.split()
 
 # Split by a specific element (doesn't include the element that was split on)
-s.split('W')
+s.split("W")
 
 # There are many more methods than the ones covered here.
 
@@ -220,7 +220,7 @@ s.split('W')
 #
 # The easiest way to show this is through an example:
 
-'Insert another string with curly brackets: {}'.format('The inserted string')
+"Insert another string with curly brackets: {}".format("The inserted string")
 
 # Using the string .format() method
 # The best way to format objects into your strings for print statements is using
@@ -231,14 +231,14 @@ s.split('W')
 # Lets see some examples:
 
 
-print('This is a string with an {p}'.format(p='insert'))
+print("This is a string with an {p}".format(p="insert"))
 
 # Multiple times:
-print('One: {p}, Two: {p}, Three: {p}'.format(p='Hi!'))
+print("One: {p}, Two: {p}, Three: {p}".format(p="Hi!"))
 
 
 # Several Objects:
-print('Object 1: {a}, Object 2: {b}, Object 3: {c}'.format(a=1,b='two',c=12.3))
+print("Object 1: {a}, Object 2: {b}, Object 3: {c}".format(a=1, b="two", c=12.3))
 
 
 # That is the basics of string formatting!

@@ -13,10 +13,10 @@
 #  Create a function that takes in two integers and returns
 ## a Boolean True if their sum is 10, False if their sum is something else.
 
-def check_ten(n1,n2):
+
+def check_ten(n1, n2):
     # Code Here
     pass
-
 
 
 # ## Task 2
@@ -24,10 +24,10 @@ def check_ten(n1,n2):
 # Create a function that takes in two integers and returns True if their
 # sum is 10, otherwise, return the actual sum value.
 
-def check_ten_sum(n1,n2):
+
+def check_ten_sum(n1, n2):
     # Code Here
     pass
-
 
 
 # ## Task 3
@@ -36,10 +36,9 @@ def check_ten_sum(n1,n2):
 # first character of that string in upper case.
 
 
-
 def first_upper(mystring):
     # Code Here
-
+    pass
 
 
 # ## Task 4
@@ -48,7 +47,6 @@ def first_upper(mystring):
 # If there are less than two chracters, return the string:  "Error".
 # Use this link if you need help/hint.
 # (https://stackoverflow.com/questions/7983820/get-the-last-4-characters-of-a-string)
-
 
 
 def last_two(mystring):
@@ -60,7 +58,6 @@ def last_two(mystring):
 #
 # Given a list of integers, return True if the sequence [1,2,3] is somewhere
 # in the list. Hint: Use slicing and a for loop.
-
 
 
 def seq_check(nums):
@@ -77,11 +74,9 @@ def seq_check(nums):
 # (or just 0). Hint: Absolute Value.**
 
 
-
-def compare_len(s1,s2):
+def compare_len(s1, s2):
     # Code Here
     pass
-
 
 
 # ## Task 7
@@ -89,7 +84,6 @@ def compare_len(s1,s2):
 # Given a list of integers, if the length of the list is an even number,
 # return the sum of the list. If the length of the list is odd, return the max
 ## value in that list.
-
 
 
 def sum_or_max(mylist):

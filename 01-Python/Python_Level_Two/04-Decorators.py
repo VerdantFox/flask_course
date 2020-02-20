@@ -14,8 +14,10 @@
 # Functions Review
 ###################
 
+
 def func():
     return 1
+
 
 func()
 
@@ -27,7 +29,8 @@ func()
 # a label is referring to.
 # For example:
 
-s = 'Global Variable'
+s = "Global Variable"
+
 
 def func():
     print(locals())
@@ -50,7 +53,7 @@ print(globals().keys())
 
 # Note how "s" is there, the Global Variable we defined as a string:
 
-globals()['s']
+globals()["s"]
 
 
 # Now lets run our function to check for any local variables in the func()
@@ -63,8 +66,10 @@ func()
 # objects which can be assigned labels and passed into other functions. Lets
 # start with some simple examples:
 
-def hello(name='Jose'):
-    return 'Hello '+name
+
+def hello(name="Jose"):
+    return "Hello " + name
+
 
 hello()
 
@@ -95,11 +100,12 @@ greet()
 # Great! So we've seen how we can treat functions as objects, now lets see how
 # we can define functions inside of other functions:
 
-def hello(name='Jose'):
-    print 'The hello() function has been executed'
+
+def hello(name="Jose"):
+    print("The hello() function has been executed")
 
     def greet():
-        return '\t This is inside the greet() function'
+        return "\t This is inside the greet() function"
 
     def welcome():
         return "\t This is inside the welcome() function"
@@ -107,6 +113,7 @@ def hello(name='Jose'):
     print(greet())
     print(welcome())
     print("Now we are back inside the hello() function")
+
 
 hello()
 # Uh oh!
@@ -120,18 +127,19 @@ welcome()
 # Returning Functions
 ######################################
 
-def hello(name='Jose'):
 
+def hello(name="Jose"):
     def greet():
-        return '\t This is inside the greet() function'
+        return "\t This is inside the greet() function"
 
     def welcome():
         return "\t This is inside the welcome() function"
 
-    if name == 'Jose':
+    if name == "Jose":
         return greet
     else:
         return welcome
+
 
 x = hello()
 
@@ -156,7 +164,7 @@ print(x())
 # When we write x = hello(), hello() gets executed and because the name is Jose
 # by default, the function greet is returned. If we change the statement to
 # x = hello(name = "Sam") then the welcome function will be returned. We can
-# also do print hello()() which outputs now you are in the greet() function.
+# also do print(hello()()) which outputs now you are in the greet() function.
 
 ######################################
 # Functions as Arguments
@@ -164,12 +172,15 @@ print(x())
 
 # Now lets see how we can pass functions as arguments into other functions:
 
+
 def hello():
-    return 'Hi Jose!'
+    return "Hi Jose!"
+
 
 def other(func):
-    print 'Other code would go here'
-    print func()
+    print("Other code would go here")
+    print(func())
+
 
 other(hello)
 
@@ -184,19 +195,21 @@ other(hello)
 # In the previous example we actually manually created a Decorator. Here we will
 # modify it to make its use case clear:
 
-def new_decorator(func):
 
+def new_decorator(func):
     def wrap_func():
-        print "Code would be here, before executing the func"
+        print("Code would be here, before executing the func")
 
         func()
 
-        print "Code here will execute after the func()"
+        print("Code here will execute after the func()")
 
     return wrap_func
 
+
 def func_needs_decorator():
-    print "This function is in need of a Decorator"
+    print("This function is in need of a Decorator")
+
 
 func_needs_decorator()
 
@@ -210,9 +223,11 @@ func_needs_decorator()
 # modified its behavior. Now lets understand how we can rewrite this code using
 # the @ symbol, which is what Python uses for Decorators:
 
+
 @new_decorator
 def func_needs_decorator():
-    print "This function is in need of a Decorator"
+    print("This function is in need of a Decorator")
+
 
 func_needs_decorator()
 

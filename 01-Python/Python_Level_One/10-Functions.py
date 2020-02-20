@@ -1,4 +1,3 @@
-
 ### Functions
 #
 # Formally, a function is a useful device that groups together a set of statements so they can be run more than once. They can also let us specify parameters that can serve as inputs to the functions.
@@ -12,12 +11,11 @@
 # To create a function we use the **def** keyword. This is the general form of a function:
 
 
-
-def lowercase_function_name(argument1,argument2,argument3='default value'):
-    '''
+def lowercase_function_name(argument1, argument2, argument3="default value"):
+    """
     This is the DocString of the function. It is where you can write a helpful
     description for anyone who will use your function.
-    '''
+    """
     # After the docstring you write code that does stuff.
 
 
@@ -35,7 +33,6 @@ def lowercase_function_name(argument1,argument2,argument3='default value'):
 # ___
 
 # ### Example 1
-
 
 
 def report_person():
@@ -57,57 +54,42 @@ def report(name):
     print("Reporting {}".format(name))
 
 
-
-
 # Notice the error
 report()
 
 
-
-
-report('Bond')
+report("Bond")
 
 
 # ### Example 3
 # ** Default arguments can be used to set a default value. **
 
 
-
-def report(name='Jason'):
-    print('Reporting {}'.format(name))
+def report(name="Jason"):
+    print("Reporting {}".format(name))
 
 
 report()
 
 
-
-
-report('Kay')
+report("Kay")
 
 
 # ## The return keyword
 # So far all of our functions have only been printing results, but what if we wanted to save the actual results of a function to another variable? How could we do this? Let's first see what happens with just print()
 
 
-def add(n1,n2):
-    print(n1+n2)
+def add(n1, n2):
+    print(n1 + n2)
 
 
+add(2, 3)
 
 
-add(2,3)
-
-
-
-
-result = add(2,3)
-
-
+result = add(2, 3)
 
 
 print(result)
-
-
 
 
 print(type(result))
@@ -116,29 +98,17 @@ print(type(result))
 # Notice how we aren't able to save the result of the print() function. That is because it is not **returning** anything. Let's now use the return keyword.
 
 
-
-def add(n1,n2):
-    return n1+n2
-
+def add(n1, n2):
+    return n1 + n2
 
 
-
-add(2,3)
-
+add(2, 3)
 
 
-
-result = add(2,3)
-
+result = add(2, 3)
 
 
 print(result)
-
-
-
-
-
-
 
 
 # ### Solving Problems with Functions
@@ -148,32 +118,32 @@ print(result)
 # ** Write a function that returns a boolean (True/False) indicating if the word 'secret' is in a string. **
 
 
-
 def secret_check(mystring):
-    return 'secret' in mystring
+    return "secret" in mystring
 
 
 # In[39]:
 
-secret_check('This is a secret.')
+secret_check("This is a secret.")
 
 
 # In[40]:
 
-secret_check('SECRET')
+secret_check("SECRET")
 
 
 # We can fix this with .lower()
 
 # In[41]:
 
+
 def secret_check(mystring):
-    return 'secret' in mystring.lower()
+    return "secret" in mystring.lower()
 
 
 # In[43]:
 
-secret_check('SECRET!')
+secret_check("SECRET!")
 
 
 # _____
@@ -182,48 +152,40 @@ secret_check('SECRET!')
 
 # In[53]:
 
+
 def code_maker(mystring):
     output = list(mystring)
-    for i,letter in enumerate(mystring):
-        for vowel in ['a','e','i','o','u']:
+    for i, letter in enumerate(mystring):
+        for vowel in ["a", "e", "i", "o", "u"]:
             if letter.lower() == vowel:
-                output[i] = 'x'
+                output[i] = "x"
 
-    output = ''.join(output)
+    output = "".join(output)
     return output
 
 
 # Let's see what **''.join(output)** does:
 
 
-
-''.join(['a','b','c'])
-
+"".join(["a", "b", "c"])
 
 
-
-'--'.join(['a','b','c'])
-
+"--".join(["a", "b", "c"])
 
 
-
-'-x-'.join(['a','b','c'])
-
+"-x-".join(["a", "b", "c"])
 
 
-
-code_maker('Edward')
-
+code_maker("Edward")
 
 
-
-code_maker('John')
+code_maker("John")
 
 
 # OTHER USEFUL Operators
-print(max(2,3))
+print(max(2, 3))
 
-mylist = ['a','b','c']
+mylist = ["a", "b", "c"]
 
 for x in mylist:
     print(x)

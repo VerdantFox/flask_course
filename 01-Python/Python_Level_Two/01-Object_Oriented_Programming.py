@@ -21,7 +21,7 @@
 #
 # Lets start the lesson by remembering about the Basic Python Objects.
 # For example:
-mylist = [1,2,3]
+mylist = [1, 2, 3]
 
 
 # Remember how we could call methods on a list?
@@ -41,9 +41,9 @@ mylist.count(2)
 
 
 print(type(1))
-print(type([1,2,3]))
-print(type((1,2,3)))
-print(type({'key1':100}))
+print(type([1, 2, 3]))
+print(type((1, 2, 3)))
+print(type({"key1": 100}))
 
 
 # So we know all these things are objects, so how can we create our own Object
@@ -64,8 +64,9 @@ print(type({'key1':100}))
 
 
 # Create a new object type called Sample
-class Sample():
+class Sample:
     pass
+
 
 # Instance of Sample
 x = Sample()
@@ -105,12 +106,13 @@ print(type(x))
 # This method is used to initialize the attributes of an object. For example:
 
 
-class Dog():
-    def __init__(self,breed):
+class Dog:
+    def __init__(self, breed):
         self.breed = breed
 
-sam = Dog(breed='Lab')
-frank = Dog(breed='Huskie')
+
+sam = Dog(breed="Lab")
+frank = Dog(breed="Huskie")
 
 
 # Lets break down what we have above.The special method
@@ -142,16 +144,18 @@ frank.breed
 # breed,name, or other attributes will always be mammals.
 # We apply this logic in the following manner:
 
-class Dog():
+
+class Dog:
 
     # Class Object Attribute
-    species = 'mammal'
+    species = "mammal"
 
-    def __init__(self,breed,name):
+    def __init__(self, breed, name):
         self.breed = breed
         self.name = name
 
-sam = Dog('Lab','Sam')
+
+sam = Dog("Lab", "Sam")
 
 sam.name
 
@@ -175,7 +179,8 @@ sam.species
 #
 # Lets go through an example of creating a Circle class:
 
-class Circle():
+
+class Circle:
 
     # This is a Class Object Attribute
     # Notice how it is not under __init__
@@ -201,9 +206,9 @@ class Circle():
 c = Circle()
 
 c.setRadius(2)
-print('Radius is: ')
+print("Radius is: ")
 print(c.getRadius())
-print('Area is: ')
+print("Area is: ")
 print(c.area())
 
 
@@ -224,7 +229,7 @@ print(c.area())
 # Lets see an example by incorporating our previous work on the Dog class:
 
 
-class Animal():
+class Animal:
     def __init__(self):
         print("Animal created")
 
@@ -245,6 +250,7 @@ class Dog(Animal):
 
     def bark(self):
         print("Woof!")
+
 
 d = Dog()
 d.report()
@@ -271,7 +277,7 @@ d.bark()
 ###################
 
 
-class Book():
+class Book:
     def __init__(self, title, author, pages):
         print("A book is created")
         self.title = title
@@ -288,6 +294,6 @@ class Book():
 
 book = Book("Python Rocks!", "Jose Portilla", 159)
 
-#Special Methods
+# Special Methods
 print(book)
 print(len(book))

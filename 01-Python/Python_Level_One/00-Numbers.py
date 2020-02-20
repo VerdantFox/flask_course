@@ -32,29 +32,29 @@
 
 # Basic Arithmetic
 # Addition
-2+1
+2 + 1
 
 # Subtraction
-2-1
+2 - 1
 
 # Multiplication
-2*2
+2 * 2
 
 
 # Division
-3/2
+3 / 2
 
 # Powers
-2**3
+2 ** 3
 
 # Can also do roots this way
-4**0.5
+4 ** 0.5
 
 # Order of Operations followed in Python
 2 + 10 * 10 + 3
 
 # Can use parenthesis to specify orders
-(2+10) * (10+3)
+(2 + 10) * (10 + 3)
 
 
 ## Variable Assignments
@@ -72,7 +72,7 @@ a = 5
 # Now if I call a in my Python script, Python will treat it as the number 5.
 
 # Adding the objects
-a+a
+a + a
 
 # What happens on reassignment? Will Python let us write it over?
 
@@ -111,7 +111,7 @@ puppies = 6
 
 weight = 2
 
-total_weight = puppies*weight
+total_weight = puppies * weight
 
 # Show my total_weight
 total_weight

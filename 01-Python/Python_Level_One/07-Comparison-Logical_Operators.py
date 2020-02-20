@@ -21,7 +21,7 @@
 # Equality
 1 == 1
 1 == "1"
-'hi' == 'bye'
+"hi" == "bye"
 # Inequality
 1 != 2
 
