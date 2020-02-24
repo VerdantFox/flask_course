@@ -11,7 +11,7 @@
 # ## Task 1
 #
 #  Create a function that takes in two integers and returns
-## a Boolean True if their sum is 10, False if their sum is something else.
+# a Boolean True if their sum is 10, False if their sum is something else.
 
 
 def check_ten(n1, n2):

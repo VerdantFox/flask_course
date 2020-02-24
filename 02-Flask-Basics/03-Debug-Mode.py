@@ -16,7 +16,7 @@ def info():
 @app.route("/puppy/<name>")
 def puppy(name):
     # Page for an individual puppy.
-    return "<h1>This is a page for {}</h1>".format(name)
+    return f"<h1>This is a page for {name[5]}</h1>"
 
 
 if __name__ == "__main__":

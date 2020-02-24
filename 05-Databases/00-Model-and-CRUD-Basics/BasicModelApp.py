@@ -22,6 +22,7 @@ db = SQLAlchemy(app)
 ####################################
 ###################################
 
+
 # Let's create our first model!
 # We inherit from db.Model class
 class Puppy(db.Model):
